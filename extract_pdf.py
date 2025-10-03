@@ -14,9 +14,39 @@ def extract_pdf(pdf_path: str, api_key: str, output_path: str = None):
         "properties": {
             "invoice_number": {"type": "string"},
             "order_number": {"type": "string"},
-            "email": {"type": "string"}
-        },
-        "required": ["invoice_number", "order_number", "email"]
+            "invoice_date": {"type": "string"},
+            "due_date": {"type": "string"},
+            "total_due": {"type": "number"},
+            "subtotal": {"type": "number"},
+            "tax": {"type": "number"},
+            "total": {"type": "number"},
+            "payment_terms": {"type": "string"},
+            "late_fee_percentage": {"type": "number"},
+            "from_company": {"type": "string"},
+            "from_address": {"type": "string"},
+            "from_email": {"type": "string"},
+            "to_company": {"type": "string"},
+            "to_address": {"type": "string"},
+            "to_email": {"type": "string"},
+            "line_items": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "quantity": {"type": "number"},
+                        "service": {"type": "string"},
+                        "description": {"type": "string"},
+                        "rate": {"type": "number"},
+                        "adjustment": {"type": "string"},
+                        "subtotal": {"type": "number"}
+                    }
+                }
+            },
+            "bank_name": {"type": "string"},
+            "bank_account": {"type": "string"},
+            "bank_bsb": {"type": "string"},
+            "payment_status": {"type": "string"}
+        }
     }
 
     # Extract from PDF
@@ -47,17 +77,14 @@ def extract_pdf(pdf_path: str, api_key: str, output_path: str = None):
     return extracted_data
 
 if __name__ == "__main__":
-    # Get API key from environment
     api_key = os.getenv("LANDINGAI_API_KEY")
     if not api_key:
         print("Error: LANDINGAI_API_KEY environment variable not set")
         exit(1)
 
-    # Find PDF
     pdf_file = "PDF Invoice Example.pdf"
     if not os.path.exists(pdf_file):
         print(f"Error: {pdf_file} not found")
         exit(1)
 
-    # Extract
     extract_pdf(pdf_file, api_key)

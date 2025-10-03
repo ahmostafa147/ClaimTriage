@@ -1,0 +1,427 @@
+{
+  "file": "PDF Invoice Example.pdf",
+  "extracted_fields": {
+    "invoice_number": "INV-3337",
+    "order_number": "12345",
+    "invoice_date": "2016-01-25",
+    "due_date": "2016-01-31",
+    "total_due": 93.5,
+    "subtotal": 85,
+    "tax": 8.5,
+    "total": 93.5,
+    "payment_terms": "Payment is due within 30 days from date of invoice.",
+    "late_fee_percentage": 5,
+    "from_company": "DEMO - Sliced Invoices",
+    "from_address": "Suite 5A-1204\n123 Somewhere Street\nYour City AZ 12345",
+    "from_email": "admin@slicedinvoices.com",
+    "to_company": "Test Business",
+    "to_address": "123 Somewhere St\nMelbourne, VIC 3000",
+    "to_email": "test@test.com",
+    "line_items": [
+      {
+        "quantity": 1,
+        "service": "Web Design",
+        "description": "This is a sample description...",
+        "rate": 85,
+        "adjustment": "0.00%",
+        "subtotal": 85
+      }
+    ],
+    "bank_name": "ANZ Bank",
+    "bank_account": "1234 1234",
+    "bank_bsb": "4321 432",
+    "payment_status": ""
+  },
+  "full_response": {
+    "data": {
+      "markdown": "logo: Sliced Invoices\n\nSummary : This image is a logo for \"Sliced Invoices\", featuring a stylized pie chart icon and the company name in two different font styles and colours.\n\nLogo Elements :\n  \u2022 Icon: A dark blue pie chart with a single slice separated, positioned to the left.\n  \u2022 Text: \"Sliced\" in a light blue, cursive font; \"Invoices\" in a dark grey, italic serif font.\n  \u2022 Layout: Icon on the left, text on the right, all horizontally aligned.\n  \u2022 Background: Plain white, no additional graphical elements or borders.\n\nDimensions & Placement :\n  \u2022 Horizontal orientation, with the icon and text forming a single line.\n  \u2022 Icon size is approximately equal to the height of the text.\n\nAnalysis : \n  \u2022 The pie chart icon visually reinforces the invoicing and financial theme.\n  \u2022 The use of two colours and font styles differentiates the brand name components, making \"Sliced\" stand out.\n  \u2022 The clean, modern design suggests a professional and user-friendly brand identity. <!-- figure, from page 0 (l=0.065,t=0.024,r=0.331,b=0.063), with ID 0576c4b0-b251-4c03-876b-5c39bb5f03a9 -->\n\n## Invoice <!-- text, from page 0 (l=0.802,t=0.062,r=0.934,b=0.090), with ID 5edf4459-b0aa-4411-82bd-ef2f734a0e91 -->\n\n<table><tbody><tr><td>Invoice Number</td><td>INV-3337</td></tr><tr><td>Order Number</td><td>12345</td></tr><tr><td>Invoice Date</td><td>January 25, 2016</td></tr><tr><td>Due Date</td><td>January 31, 2016</td></tr><tr><td>Total Due</td><td>$93.50</td></tr></tbody></table> <!-- table, from page 0 (l=0.569,t=0.134,r=0.931,b=0.232), with ID 80802881-a3d1-4a4b-9434-ceb2a70ac2ba -->\n\nFrom:\nDEMO - Sliced Invoices\nSuite 5A-1204\n123 Somewhere Street\nYour City AZ 12345\nadmin@slicedinvoices.com <!-- text, from page 0 (l=0.066,t=0.144,r=0.258,b=0.236), with ID fd0c08fc-e662-44a9-a091-18ca8443589a -->\n\nTo:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com <!-- text, from page 0 (l=0.066,t=0.274,r=0.217,b=0.352), with ID 1f360460-6ea6-4101-92bb-b5aaedc5b231 -->\n\n<table><thead><tr><th>Hrs/Qty</th><th>Service</th><th>Rate/Price</th><th>Adjust</th><th>Sub Total</th></tr></thead><tbody><tr><td>1.00</td><td>Web Design<br>This is a sample description...</td><td>$85.00</td><td>0.00%</td><td>$85.00</td></tr></tbody></table> <!-- table, from page 0 (l=0.068,t=0.382,r=0.933,b=0.448), with ID 42277c28-84d9-4501-85b1-e79ef83f343e -->\n\n<table><tbody><tr><td>Sub Total</td><td>$85.00</td></tr><tr><td>Tax</td><td>$8.50</td></tr><tr><td>Total</td><td>$93.50</td></tr></tbody></table> <!-- table, from page 0 (l=0.566,t=0.457,r=0.933,b=0.523), with ID 1ace7058-e722-4a85-b777-331ed1e7aaf7 -->\n\nANZ Bank\nACC # 1234 1234\nBSB # 4321 432 <!-- text, from page 0 (l=0.065,t=0.556,r=0.196,b=0.605), with ID 9b7c8a6b-500f-46d8-82b4-848f4bd7d948 -->\n\nPayment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin@slicedinvoices.com\nPage 1/1 <!-- marginalia, from page 0 (l=0.066,t=0.915,r=0.737,b=0.963), with ID 556999f9-f154-4e8a-96ba-2bc922f1dfe9 -->",
+      "extracted_schema": {
+        "invoice_number": "INV-3337",
+        "order_number": "12345",
+        "invoice_date": "2016-01-25",
+        "due_date": "2016-01-31",
+        "total_due": 93.5,
+        "subtotal": 85,
+        "tax": 8.5,
+        "total": 93.5,
+        "payment_terms": "Payment is due within 30 days from date of invoice.",
+        "late_fee_percentage": 5,
+        "from_company": "DEMO - Sliced Invoices",
+        "from_address": "Suite 5A-1204\n123 Somewhere Street\nYour City AZ 12345",
+        "from_email": "admin@slicedinvoices.com",
+        "to_company": "Test Business",
+        "to_address": "123 Somewhere St\nMelbourne, VIC 3000",
+        "to_email": "test@test.com",
+        "line_items": [
+          {
+            "quantity": 1,
+            "service": "Web Design",
+            "description": "This is a sample description...",
+            "rate": 85,
+            "adjustment": "0.00%",
+            "subtotal": 85
+          }
+        ],
+        "bank_name": "ANZ Bank",
+        "bank_account": "1234 1234",
+        "bank_bsb": "4321 432",
+        "payment_status": ""
+      },
+      "extraction_metadata": {
+        "invoice_number": {
+          "value": "INV-3337",
+          "chunk_references": [
+            "80802881-a3d1-4a4b-9434-ceb2a70ac2ba"
+          ],
+          "confidence": null
+        },
+        "order_number": {
+          "value": "12345",
+          "chunk_references": [
+            "80802881-a3d1-4a4b-9434-ceb2a70ac2ba"
+          ],
+          "confidence": null
+        },
+        "invoice_date": {
+          "value": "2016-01-25",
+          "chunk_references": [
+            "80802881-a3d1-4a4b-9434-ceb2a70ac2ba"
+          ],
+          "confidence": null
+        },
+        "due_date": {
+          "value": "2016-01-31",
+          "chunk_references": [
+            "80802881-a3d1-4a4b-9434-ceb2a70ac2ba"
+          ],
+          "confidence": null
+        },
+        "total_due": {
+          "value": 93.5,
+          "chunk_references": [
+            "80802881-a3d1-4a4b-9434-ceb2a70ac2ba"
+          ],
+          "confidence": null
+        },
+        "subtotal": {
+          "value": 85,
+          "chunk_references": [
+            "1ace7058-e722-4a85-b777-331ed1e7aaf7"
+          ],
+          "confidence": null
+        },
+        "tax": {
+          "value": 8.5,
+          "chunk_references": [
+            "1ace7058-e722-4a85-b777-331ed1e7aaf7"
+          ],
+          "confidence": null
+        },
+        "total": {
+          "value": 93.5,
+          "chunk_references": [
+            "1ace7058-e722-4a85-b777-331ed1e7aaf7"
+          ],
+          "confidence": null
+        },
+        "payment_terms": {
+          "value": "Payment is due within 30 days from date of invoice.",
+          "chunk_references": [
+            "556999f9-f154-4e8a-96ba-2bc922f1dfe9"
+          ],
+          "confidence": 1.0
+        },
+        "late_fee_percentage": {
+          "value": 5,
+          "chunk_references": [
+            "556999f9-f154-4e8a-96ba-2bc922f1dfe9"
+          ],
+          "confidence": 1.0
+        },
+        "from_company": {
+          "value": "DEMO - Sliced Invoices",
+          "chunk_references": [
+            "fd0c08fc-e662-44a9-a091-18ca8443589a"
+          ],
+          "confidence": 0.9999595611616676
+        },
+        "from_address": {
+          "value": "Suite 5A-1204\n123 Somewhere Street\nYour City AZ 12345",
+          "chunk_references": [
+            "fd0c08fc-e662-44a9-a091-18ca8443589a"
+          ],
+          "confidence": 0.9997366875656695
+        },
+        "from_email": {
+          "value": "admin@slicedinvoices.com",
+          "chunk_references": [
+            "fd0c08fc-e662-44a9-a091-18ca8443589a"
+          ],
+          "confidence": 0.825394778119241
+        },
+        "to_company": {
+          "value": "Test Business",
+          "chunk_references": [
+            "1f360460-6ea6-4101-92bb-b5aaedc5b231"
+          ],
+          "confidence": 1.0
+        },
+        "to_address": {
+          "value": "123 Somewhere St\nMelbourne, VIC 3000",
+          "chunk_references": [
+            "1f360460-6ea6-4101-92bb-b5aaedc5b231"
+          ],
+          "confidence": 0.9999998063873693
+        },
+        "to_email": {
+          "value": "test@test.com",
+          "chunk_references": [
+            "1f360460-6ea6-4101-92bb-b5aaedc5b231"
+          ],
+          "confidence": 0.9999996871837232
+        },
+        "line_items": [
+          {
+            "quantity": {
+              "value": 1,
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            },
+            "service": {
+              "value": "Web Design",
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            },
+            "description": {
+              "value": "This is a sample description...",
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            },
+            "rate": {
+              "value": 85,
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            },
+            "adjustment": {
+              "value": "0.00%",
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            },
+            "subtotal": {
+              "value": 85,
+              "chunk_references": [
+                "42277c28-84d9-4501-85b1-e79ef83f343e"
+              ],
+              "confidence": null
+            }
+          }
+        ],
+        "bank_name": {
+          "value": "ANZ Bank",
+          "chunk_references": [
+            "9b7c8a6b-500f-46d8-82b4-848f4bd7d948"
+          ],
+          "confidence": 0.9999998063873693
+        },
+        "bank_account": {
+          "value": "1234 1234",
+          "chunk_references": [
+            "9b7c8a6b-500f-46d8-82b4-848f4bd7d948"
+          ],
+          "confidence": 1.0
+        },
+        "bank_bsb": {
+          "value": "4321 432",
+          "chunk_references": [
+            "9b7c8a6b-500f-46d8-82b4-848f4bd7d948"
+          ],
+          "confidence": 1.0
+        },
+        "payment_status": {
+          "value": "",
+          "chunk_references": [],
+          "confidence": null
+        }
+      },
+      "chunks": [
+        {
+          "text": "logo: Sliced Invoices\n\nSummary : This image is a logo for \"Sliced Invoices\", featuring a stylized pie chart icon and the company name in two different font styles and colours.\n\nLogo Elements :\n  \u2022 Icon: A dark blue pie chart with a single slice separated, positioned to the left.\n  \u2022 Text: \"Sliced\" in a light blue, cursive font; \"Invoices\" in a dark grey, italic serif font.\n  \u2022 Layout: Icon on the left, text on the right, all horizontally aligned.\n  \u2022 Background: Plain white, no additional graphical elements or borders.\n\nDimensions & Placement :\n  \u2022 Horizontal orientation, with the icon and text forming a single line.\n  \u2022 Icon size is approximately equal to the height of the text.\n\nAnalysis : \n  \u2022 The pie chart icon visually reinforces the invoicing and financial theme.\n  \u2022 The use of two colours and font styles differentiates the brand name components, making \"Sliced\" stand out.\n  \u2022 The clean, modern design suggests a professional and user-friendly brand identity.",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06543561816215515,
+                "t": 0.024174049496650696,
+                "r": 0.33074256777763367,
+                "b": 0.06272745877504349
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "figure",
+          "chunk_id": "0576c4b0-b251-4c03-876b-5c39bb5f03a9",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "## Invoice",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.801806628704071,
+                "t": 0.06176828593015671,
+                "r": 0.9336449503898621,
+                "b": 0.09013276547193527
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "5edf4459-b0aa-4411-82bd-ef2f734a0e91",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "<table><tbody><tr><td>Invoice Number</td><td>INV-3337</td></tr><tr><td>Order Number</td><td>12345</td></tr><tr><td>Invoice Date</td><td>January 25, 2016</td></tr><tr><td>Due Date</td><td>January 31, 2016</td></tr><tr><td>Total Due</td><td>$93.50</td></tr></tbody></table>",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.5689665675163269,
+                "t": 0.13360683619976044,
+                "r": 0.9314798712730408,
+                "b": 0.2324133664369583
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "table",
+          "chunk_id": "80802881-a3d1-4a4b-9434-ceb2a70ac2ba",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "From:\nDEMO - Sliced Invoices\nSuite 5A-1204\n123 Somewhere Street\nYour City AZ 12345\nadmin@slicedinvoices.com",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06581033766269684,
+                "t": 0.14408788084983826,
+                "r": 0.25806331634521484,
+                "b": 0.2364705204963684
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "fd0c08fc-e662-44a9-a091-18ca8443589a",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "To:\nTest Business\n123 Somewhere St\nMelbourne, VIC 3000\ntest@test.com",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06616291403770447,
+                "t": 0.274425208568573,
+                "r": 0.21748760342597961,
+                "b": 0.3518803119659424
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "1f360460-6ea6-4101-92bb-b5aaedc5b231",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "<table><thead><tr><th>Hrs/Qty</th><th>Service</th><th>Rate/Price</th><th>Adjust</th><th>Sub Total</th></tr></thead><tbody><tr><td>1.00</td><td>Web Design<br>This is a sample description...</td><td>$85.00</td><td>0.00%</td><td>$85.00</td></tr></tbody></table>",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06760534644126892,
+                "t": 0.38187092542648315,
+                "r": 0.9326521158218384,
+                "b": 0.4480701684951782
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "table",
+          "chunk_id": "42277c28-84d9-4501-85b1-e79ef83f343e",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "<table><tbody><tr><td>Sub Total</td><td>$85.00</td></tr><tr><td>Tax</td><td>$8.50</td></tr><tr><td>Total</td><td>$93.50</td></tr></tbody></table>",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.5660391449928284,
+                "t": 0.45744967460632324,
+                "r": 0.9325471520423889,
+                "b": 0.522636890411377
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "table",
+          "chunk_id": "1ace7058-e722-4a85-b777-331ed1e7aaf7",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "ANZ Bank\nACC # 1234 1234\nBSB # 4321 432",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06525640189647675,
+                "t": 0.5558252334594727,
+                "r": 0.1955299824476242,
+                "b": 0.6051509380340576
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "9b7c8a6b-500f-46d8-82b4-848f4bd7d948",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Payment is due within 30 days from date of invoice. Late payment is subject to fees of 5% per month.\nThanks for choosing DEMO - Sliced Invoices | admin@slicedinvoices.com\nPage 1/1",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.06561055779457092,
+                "t": 0.9148983359336853,
+                "r": 0.7366065979003906,
+                "b": 0.9629896283149719
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "marginalia",
+          "chunk_id": "556999f9-f154-4e8a-96ba-2bc922f1dfe9",
+          "rotation_angle": 0.0
+        }
+      ]
+    },
+    "errors": [],
+    "extraction_error": null,
+    "metadata": {
+      "parse_id": "q267qxhqyg10nhidp0ndo8m1c",
+      "page_count": 1,
+      "processed_at": "2025-10-03T20:55:56.986052+00:00",
+      "pages_processed": 1,
+      "processing_time_ms": 13721,
+      "filename": "PDF Invoice Example.pdf",
+      "user_id": "cl6txjmqvqcu",
+      "pages_rotation_angles": {
+        "0": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,1296 @@
+{
+  "file": "Ahmed Resume ML.pdf",
+  "extracted_fields": {
+    "personal_info": {
+      "name": "Ahmed Mostafa",
+      "address": "2141 Virginia St, Berkeley, CA, United States",
+      "phone": "(949) 426-5899",
+      "email": "ahmostafa@berkeley.edu",
+      "linkedin": "linkedin.com/in/ahmed-mostafa147",
+      "github": "github.com/ahmostafa147"
+    },
+    "education": [
+      {
+        "institution": "University of California, Berkeley",
+        "degree": "M.Eng.",
+        "major": "Electrical Engineering & Computer Science",
+        "minor": "",
+        "gpa": "",
+        "start_date": "2025-08",
+        "end_date": "2026-05",
+        "coursework": []
+      },
+      {
+        "institution": "University of California, San Diego",
+        "degree": "B.S.",
+        "major": "Data Science",
+        "minor": "Mathematics",
+        "gpa": "4.0/4.0",
+        "start_date": "2022-09",
+        "end_date": "2025-03",
+        "coursework": [
+          "Data Structures & Algorithms",
+          "Machine Learning",
+          "Systems for Scalable Analytics",
+          "Agentic AI",
+          "Responsible Data Science"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "title": "Machine Learning Intern",
+        "company": "CarsXE",
+        "location": "Highland, MD",
+        "start_date": "2024-06",
+        "end_date": "2024-09",
+        "responsibilities": [
+          "Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn",
+          "Developed automated pipelines integrating multiple RESTful APIs, streamlining data for model training",
+          "Performed exploratory data analysis, reducing feature space and memory usage by 54%, using Seaborn and Pandas"
+        ]
+      },
+      {
+        "title": "Software Engineering Intern",
+        "company": "CarsXE",
+        "location": "Highland, MD",
+        "start_date": "2023-06",
+        "end_date": "2023-09",
+        "responsibilities": [
+          "Developed full-stack user monitoring system using Python, implementing analytics to identify growth opportunities",
+          "Engineered API data validation step, enhancing reliability through systematic consistency checks and error handling",
+          "Optimized backend performance by caching dynamic queries, reducing dashboard runtime from 15 min to seconds"
+        ]
+      },
+      {
+        "title": "Instructional Assistant",
+        "company": "UC San Diego \u2013 Hal\u0131c\u0131o\u011flu Data Science Institute",
+        "location": "San Diego, CA",
+        "start_date": "2023-09",
+        "end_date": "2025-03",
+        "responsibilities": [
+          "Tutored 1000+ students, improving understanding of different machine learning models through discussion sessions",
+          "Utilized students tutoring session feedback, improving Java, Data Structures, and debugging knowledge retainment",
+          "Created version control system project, aiding students to understand Git using simplified write-up approaches"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Radiographic Enhanced Sepsis Detection System",
+        "technologies": [
+          "Python",
+          "TensorFlow",
+          "AWS",
+          "CatBoost",
+          "React"
+        ],
+        "description": [
+          "Utilized chest Xrays & lab test to train an early sepsis detection model achieving 0.88 AUC using SageMaker",
+          "Processed and integrated MIMIC-IV and MIMIC-CXR datasets using SQL and probabilistic imputation techniques",
+          "Engineered ResNet-50 CNN model achieving 96% recall for pneumonia by fine-tuning transfer learning architecture",
+          "Deployed model using AWS ECS, automating updates via EventBridge and Lambda for smooth integration"
+        ]
+      },
+      {
+        "name": "Sepsis Clustering in ICU Patients",
+        "technologies": [
+          "R",
+          "PostgreSQL",
+          "Docker",
+          "Git"
+        ],
+        "description": [
+          "Replicated a research paper on multimorbidity & sepsis in ICU patients, analyzing 36,000+ EHRs of MIMIC-III",
+          "Trained latent class analysis to identify patient subgroups, connecting different risks for organ dysfunction and sepsis",
+          "Created network visualization to highlight critical multimorbidity patterns, aiding in subgroups labeling, using ggraph",
+          "Documented reproducibility processes in GitHub, ensuring robust methodologies tracking in the MIMIC-III analysis"
+        ]
+      },
+      {
+        "name": "League of Legends: Winning Prediction",
+        "technologies": [
+          "Sci-kit learn",
+          "Pandas",
+          "Numpy",
+          "Plotly"
+        ],
+        "description": [
+          "Implemented a Random Forest Classifier to predict match outcomes, using GridSearchCV for parameter tuning",
+          "Achieved a 34% increase to prediction accuracy by integrating champion-specific statistics and team dynamics",
+          "Discovered that in lane to lane comparisons, support roles have an inverse relationship between kills and win-rate",
+          "Conducted permutation test to evaluate model bias across team sides, assessing the fairness of the model"
+        ]
+      }
+    ],
+    "skills": {
+      "languages": [
+        "Python",
+        "Java",
+        "SQL",
+        "TypeScript"
+      ],
+      "frameworks": [
+        "Spark",
+        "Dask",
+        "TensorFlow",
+        "Streamlit",
+        "JUnit",
+        "GitHub Actions CI/CD"
+      ],
+      "tools": [
+        "Git",
+        "Docker",
+        "VS Code",
+        "IntelliJ",
+        "Firebase",
+        "Jira",
+        "Tableau"
+      ],
+      "libraries": [
+        "Pandas",
+        "NumPy",
+        "Plotly",
+        "Sklearn",
+        "Seaborn",
+        "D3.js",
+        "Scipy",
+        "Keras"
+      ]
+    }
+  },
+  "full_response": {
+    "data": {
+      "markdown": "# Ahmed Mostafa\n2141 Virginia St, Berkeley, CA, United States <!-- text, from page 0 (l=0.311,t=0.038,r=0.687,b=0.089), with ID 939db8f9-d3c8-43ff-aade-c3bd98bcf182 -->\n\n(949) 426-5899 | ahmostafa@berkeley.edu | linkedin.com/in/ahmed-mostafa147 | github.com/ahmostafa147 <!-- text, from page 0 (l=0.114,t=0.088,r=0.886,b=0.109), with ID 88a517a2-5116-4e86-9f23-57919a2774c7 -->\n\nEducation\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUniversity of California, Berkeley                                                      Aug. 2025 - May 2026\n*M.Eng. in Electrical Engineering & Computer Science* <!-- text, from page 0 (l=0.053,t=0.112,r=0.947,b=0.175), with ID a3d75736-7ce6-4fb6-8261-079354fbd6fb -->\n\n**University of California, San Diego**                                                    **Sep. 2022 - March 2025**  \n*B.S. in Data Science, Minor in Mathematics*                                   *GPA: 4.0/4.0*  \n**Relevant Coursework:**  \nData Structures & Algorithms, Machine Learning, Systems for Scalable Analytics, Agentic AI, Responsible Data Science <!-- text, from page 0 (l=0.053,t=0.176,r=0.947,b=0.243), with ID 9b2a7578-67dd-479c-8ab8-7b30d8e525fd -->\n\nExperience\n\nMachine Learning Intern                                                    June 2024 \u2013 Sep. 2024\nCarsXE                                                                     Highland, MD\n- \u2022 Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn\n- \u2022 Developed automated pipelines integrating multiple **RESTful APIs**, streamlining data for model training\n- \u2022 Performed exploratory data analysis, reducing feature space and memory usage by **54%**, using Seaborn and Pandas <!-- text, from page 0 (l=0.054,t=0.247,r=0.946,b=0.362), with ID 78b04d16-7b57-4add-8a21-a0f7948b08ed -->\n\nSoftware Engineering Intern\n_CarsXE_\n\n- Developed **full-stack** user monitoring system using Python, implementing analytics to identify growth opportunities\n- Engineered API data validation step, enhancing reliability through systematic consistency checks and error handling\n- Optimized backend performance by caching dynamic queries, reducing dashboard runtime from **15 min to seconds**\n\nJune 2023 \u2013 Sep. 2023  \n_Highland, MD_ <!-- text, from page 0 (l=0.054,t=0.362,r=0.947,b=0.452), with ID f9232e55-18a4-4070-bed0-552a31bb7185 -->\n\n**Instructional Assistant**  \n_UC San Diego \u2013 Hal\u0131c\u0131o\u011flu Data Science Institute_  \n\n- \u2022 Tutored **1000+ students**, improving understanding of different machine learning models through discussion sessions\n- \u2022 Utilized students tutoring session feedback, improving **Java**, Data Structures, and **debugging** knowledge retainment\n- \u2022 Created **version control system** project, aiding students to understand Git using simplified write-up approaches\n\n**Sep. 2023 \u2013 March 2025**  \n_San Diego, CA_ <!-- text, from page 0 (l=0.054,t=0.452,r=0.946,b=0.542), with ID cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917 -->\n\nProjects\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n- **Radiographic Enhanced Sepsis Detection System** \u2014 _Python, TensorFlow, AWS, CatBoost, React_\n  - \u2022 Utilized chest Xrays & lab test to train an early sepsis detection model achieving **0.88 AUC** using SageMaker\n  - \u2022 Processed and integrated MIMIC-IV and MIMIC-CXR datasets using SQL and probabilistic imputation techniques\n  - \u2022 Engineered ResNet-50 CNN model achieving **96% recall** for pneumonia by fine-tuning transfer learning architecture\n  - \u2022 Deployed model using AWS ECS, automating updates via EventBridge and Lambda for smooth integration <!-- text, from page 0 (l=0.053,t=0.543,r=0.942,b=0.668), with ID 1458708b-e7b5-4ba0-acee-8ab7fdc5c47a -->\n\n- Sepsis Clustering in ICU Patients | *R, PostgreSQL, Docker, Git*\n  - \u2022 Replicated a research paper on multimorbidity & sepsis in ICU patients, analyzing **36,000**+ EHRs of MIMIC-III\n  - \u2022 Trained latent class analysis to identify patient subgroups, connecting different risks for organ dysfunction and sepsis\n  - \u2022 Created network visualization to highlight critical multimorbidity patterns, aiding in subgroups labeling, using ggraph\n  - \u2022 Documented reproducibility processes in GitHub, ensuring robust methodologies tracking in the MIMIC-III analysis <!-- text, from page 0 (l=0.055,t=0.670,r=0.941,b=0.767), with ID 0de66f1d-b1a9-45b4-8868-9a3530f1ff82 -->\n\n- \u2022 League of Legends: **Winning Prediction** | _Sci-kit learn, Pandas, Numpy, Plotly_\n  - \u2022 Implemented a **Random Forest Classifier** to predict match outcomes, using **GridSearchCV** for parameter tuning\n  - \u2022 **Achieved a 34% increase to prediction accuracy** by integrating champion-specific statistics and team dynamics\n  - \u2022 Discovered that in lane to lane comparisons, support roles have an inverse relationship between kills and win-rate\n  - \u2022 Conducted **permutation test** to evaluate model bias across team sides, assessing the fairness of the model <!-- text, from page 0 (l=0.055,t=0.769,r=0.938,b=0.865), with ID 17a1ad5e-39cb-4f9a-b722-1b4cc20c795a -->\n\nTechnical Skills\n________________________________________________________________________________\n\nLanguages: Python, Java, SQL, TypeScript\nFrameworks: Spark, Dask, TensorFlow, Streamlit, JUnit, GitHub Actions CI/CD\nDeveloper Tools: Git, Docker, VS Code, IntelliJ, Firebase, Jira, Tableau\nLibraries: Pandas, NumPy, Plotly, Sklearn, Seaborn, D3.js, Scipy, Keras <!-- text, from page 0 (l=0.054,t=0.866,r=0.677,b=0.955), with ID 3f474489-e4af-43ed-a25b-2a3d787525d9 -->",
+      "extracted_schema": {
+        "personal_info": {
+          "name": "Ahmed Mostafa",
+          "address": "2141 Virginia St, Berkeley, CA, United States",
+          "phone": "(949) 426-5899",
+          "email": "ahmostafa@berkeley.edu",
+          "linkedin": "linkedin.com/in/ahmed-mostafa147",
+          "github": "github.com/ahmostafa147"
+        },
+        "education": [
+          {
+            "institution": "University of California, Berkeley",
+            "degree": "M.Eng.",
+            "major": "Electrical Engineering & Computer Science",
+            "minor": "",
+            "gpa": "",
+            "start_date": "2025-08",
+            "end_date": "2026-05",
+            "coursework": []
+          },
+          {
+            "institution": "University of California, San Diego",
+            "degree": "B.S.",
+            "major": "Data Science",
+            "minor": "Mathematics",
+            "gpa": "4.0/4.0",
+            "start_date": "2022-09",
+            "end_date": "2025-03",
+            "coursework": [
+              "Data Structures & Algorithms",
+              "Machine Learning",
+              "Systems for Scalable Analytics",
+              "Agentic AI",
+              "Responsible Data Science"
+            ]
+          }
+        ],
+        "experience": [
+          {
+            "title": "Machine Learning Intern",
+            "company": "CarsXE",
+            "location": "Highland, MD",
+            "start_date": "2024-06",
+            "end_date": "2024-09",
+            "responsibilities": [
+              "Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn",
+              "Developed automated pipelines integrating multiple RESTful APIs, streamlining data for model training",
+              "Performed exploratory data analysis, reducing feature space and memory usage by 54%, using Seaborn and Pandas"
+            ]
+          },
+          {
+            "title": "Software Engineering Intern",
+            "company": "CarsXE",
+            "location": "Highland, MD",
+            "start_date": "2023-06",
+            "end_date": "2023-09",
+            "responsibilities": [
+              "Developed full-stack user monitoring system using Python, implementing analytics to identify growth opportunities",
+              "Engineered API data validation step, enhancing reliability through systematic consistency checks and error handling",
+              "Optimized backend performance by caching dynamic queries, reducing dashboard runtime from 15 min to seconds"
+            ]
+          },
+          {
+            "title": "Instructional Assistant",
+            "company": "UC San Diego \u2013 Hal\u0131c\u0131o\u011flu Data Science Institute",
+            "location": "San Diego, CA",
+            "start_date": "2023-09",
+            "end_date": "2025-03",
+            "responsibilities": [
+              "Tutored 1000+ students, improving understanding of different machine learning models through discussion sessions",
+              "Utilized students tutoring session feedback, improving Java, Data Structures, and debugging knowledge retainment",
+              "Created version control system project, aiding students to understand Git using simplified write-up approaches"
+            ]
+          }
+        ],
+        "projects": [
+          {
+            "name": "Radiographic Enhanced Sepsis Detection System",
+            "technologies": [
+              "Python",
+              "TensorFlow",
+              "AWS",
+              "CatBoost",
+              "React"
+            ],
+            "description": [
+              "Utilized chest Xrays & lab test to train an early sepsis detection model achieving 0.88 AUC using SageMaker",
+              "Processed and integrated MIMIC-IV and MIMIC-CXR datasets using SQL and probabilistic imputation techniques",
+              "Engineered ResNet-50 CNN model achieving 96% recall for pneumonia by fine-tuning transfer learning architecture",
+              "Deployed model using AWS ECS, automating updates via EventBridge and Lambda for smooth integration"
+            ]
+          },
+          {
+            "name": "Sepsis Clustering in ICU Patients",
+            "technologies": [
+              "R",
+              "PostgreSQL",
+              "Docker",
+              "Git"
+            ],
+            "description": [
+              "Replicated a research paper on multimorbidity & sepsis in ICU patients, analyzing 36,000+ EHRs of MIMIC-III",
+              "Trained latent class analysis to identify patient subgroups, connecting different risks for organ dysfunction and sepsis",
+              "Created network visualization to highlight critical multimorbidity patterns, aiding in subgroups labeling, using ggraph",
+              "Documented reproducibility processes in GitHub, ensuring robust methodologies tracking in the MIMIC-III analysis"
+            ]
+          },
+          {
+            "name": "League of Legends: Winning Prediction",
+            "technologies": [
+              "Sci-kit learn",
+              "Pandas",
+              "Numpy",
+              "Plotly"
+            ],
+            "description": [
+              "Implemented a Random Forest Classifier to predict match outcomes, using GridSearchCV for parameter tuning",
+              "Achieved a 34% increase to prediction accuracy by integrating champion-specific statistics and team dynamics",
+              "Discovered that in lane to lane comparisons, support roles have an inverse relationship between kills and win-rate",
+              "Conducted permutation test to evaluate model bias across team sides, assessing the fairness of the model"
+            ]
+          }
+        ],
+        "skills": {
+          "languages": [
+            "Python",
+            "Java",
+            "SQL",
+            "TypeScript"
+          ],
+          "frameworks": [
+            "Spark",
+            "Dask",
+            "TensorFlow",
+            "Streamlit",
+            "JUnit",
+            "GitHub Actions CI/CD"
+          ],
+          "tools": [
+            "Git",
+            "Docker",
+            "VS Code",
+            "IntelliJ",
+            "Firebase",
+            "Jira",
+            "Tableau"
+          ],
+          "libraries": [
+            "Pandas",
+            "NumPy",
+            "Plotly",
+            "Sklearn",
+            "Seaborn",
+            "D3.js",
+            "Scipy",
+            "Keras"
+          ]
+        }
+      },
+      "extraction_metadata": {
+        "personal_info": {
+          "name": {
+            "value": "Ahmed Mostafa",
+            "chunk_references": [
+              "939db8f9-d3c8-43ff-aade-c3bd98bcf182"
+            ],
+            "confidence": 1.0
+          },
+          "address": {
+            "value": "2141 Virginia St, Berkeley, CA, United States",
+            "chunk_references": [
+              "939db8f9-d3c8-43ff-aade-c3bd98bcf182"
+            ],
+            "confidence": 0.9999945614411088
+          },
+          "phone": {
+            "value": "(949) 426-5899",
+            "chunk_references": [
+              "88a517a2-5116-4e86-9f23-57919a2774c7"
+            ],
+            "confidence": 0.9999592483578844
+          },
+          "email": {
+            "value": "ahmostafa@berkeley.edu",
+            "chunk_references": [
+              "88a517a2-5116-4e86-9f23-57919a2774c7"
+            ],
+            "confidence": 0.9999185279898425
+          },
+          "linkedin": {
+            "value": "linkedin.com/in/ahmed-mostafa147",
+            "chunk_references": [
+              "88a517a2-5116-4e86-9f23-57919a2774c7"
+            ],
+            "confidence": 0.9974533310690816
+          },
+          "github": {
+            "value": "github.com/ahmostafa147",
+            "chunk_references": [
+              "88a517a2-5116-4e86-9f23-57919a2774c7"
+            ],
+            "confidence": 0.9999985847373761
+          }
+        },
+        "education": [
+          {
+            "institution": {
+              "value": "University of California, Berkeley",
+              "chunk_references": [
+                "a3d75736-7ce6-4fb6-8261-079354fbd6fb"
+              ],
+              "confidence": 0.9999857108429071
+            },
+            "degree": {
+              "value": "M.Eng.",
+              "chunk_references": [
+                "a3d75736-7ce6-4fb6-8261-079354fbd6fb"
+              ],
+              "confidence": 0.8171141887905626
+            },
+            "major": {
+              "value": "Electrical Engineering & Computer Science",
+              "chunk_references": [
+                "a3d75736-7ce6-4fb6-8261-079354fbd6fb"
+              ],
+              "confidence": 0.9999949638444773
+            },
+            "minor": {
+              "value": "",
+              "chunk_references": [],
+              "confidence": null
+            },
+            "gpa": {
+              "value": "",
+              "chunk_references": [],
+              "confidence": null
+            },
+            "start_date": {
+              "value": "2025-08",
+              "chunk_references": [
+                "a3d75736-7ce6-4fb6-8261-079354fbd6fb"
+              ],
+              "confidence": null
+            },
+            "end_date": {
+              "value": "2026-05",
+              "chunk_references": [
+                "a3d75736-7ce6-4fb6-8261-079354fbd6fb"
+              ],
+              "confidence": null
+            },
+            "coursework": []
+          },
+          {
+            "institution": {
+              "value": "University of California, San Diego",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": 0.9999998063873693
+            },
+            "degree": {
+              "value": "B.S.",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": 0.9999998063873693
+            },
+            "major": {
+              "value": "Data Science",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": 1.0
+            },
+            "minor": {
+              "value": "Mathematics",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": 1.0
+            },
+            "gpa": {
+              "value": "4.0/4.0",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": 0.9999721963191718
+            },
+            "start_date": {
+              "value": "2022-09",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": null
+            },
+            "end_date": {
+              "value": "2025-03",
+              "chunk_references": [
+                "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+              ],
+              "confidence": null
+            },
+            "coursework": [
+              {
+                "value": "Data Structures & Algorithms",
+                "chunk_references": [
+                  "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "Machine Learning",
+                "chunk_references": [
+                  "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "Systems for Scalable Analytics",
+                "chunk_references": [
+                  "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "Agentic AI",
+                "chunk_references": [
+                  "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+                ],
+                "confidence": 0.9997378641193743
+              },
+              {
+                "value": "Responsible Data Science",
+                "chunk_references": [
+                  "9b2a7578-67dd-479c-8ab8-7b30d8e525fd"
+                ],
+                "confidence": 1.0
+              }
+            ]
+          }
+        ],
+        "experience": [
+          {
+            "title": {
+              "value": "Machine Learning Intern",
+              "chunk_references": [
+                "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+              ],
+              "confidence": 0.9999977055186553
+            },
+            "company": {
+              "value": "CarsXE",
+              "chunk_references": [
+                "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+              ],
+              "confidence": 0.9853984832325995
+            },
+            "location": {
+              "value": "Highland, MD",
+              "chunk_references": [
+                "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+              ],
+              "confidence": 0.9999993295729129
+            },
+            "start_date": {
+              "value": "2024-06",
+              "chunk_references": [
+                "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+              ],
+              "confidence": null
+            },
+            "end_date": {
+              "value": "2024-09",
+              "chunk_references": [
+                "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+              ],
+              "confidence": null
+            },
+            "responsibilities": [
+              {
+                "value": "Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn",
+                "chunk_references": [
+                  "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+                ],
+                "confidence": 0.9885230530106212
+              },
+              {
+                "value": "Developed automated pipelines integrating multiple RESTful APIs, streamlining data for model training",
+                "chunk_references": [
+                  "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Performed exploratory data analysis, reducing feature space and memory usage by 54%, using Seaborn and Pandas",
+                "chunk_references": [
+                  "78b04d16-7b57-4add-8a21-a0f7948b08ed"
+                ],
+                "confidence": null
+              }
+            ]
+          },
+          {
+            "title": {
+              "value": "Software Engineering Intern",
+              "chunk_references": [
+                "f9232e55-18a4-4070-bed0-552a31bb7185"
+              ],
+              "confidence": 0.999735644631779
+            },
+            "company": {
+              "value": "CarsXE",
+              "chunk_references": [
+                "f9232e55-18a4-4070-bed0-552a31bb7185"
+              ],
+              "confidence": 0.8382034567597484
+            },
+            "location": {
+              "value": "Highland, MD",
+              "chunk_references": [
+                "f9232e55-18a4-4070-bed0-552a31bb7185"
+              ],
+              "confidence": 0.9958311029328635
+            },
+            "start_date": {
+              "value": "2023-06",
+              "chunk_references": [
+                "f9232e55-18a4-4070-bed0-552a31bb7185"
+              ],
+              "confidence": null
+            },
+            "end_date": {
+              "value": "2023-09",
+              "chunk_references": [
+                "f9232e55-18a4-4070-bed0-552a31bb7185"
+              ],
+              "confidence": null
+            },
+            "responsibilities": [
+              {
+                "value": "Developed full-stack user monitoring system using Python, implementing analytics to identify growth opportunities",
+                "chunk_references": [
+                  "f9232e55-18a4-4070-bed0-552a31bb7185"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Engineered API data validation step, enhancing reliability through systematic consistency checks and error handling",
+                "chunk_references": [
+                  "f9232e55-18a4-4070-bed0-552a31bb7185"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "Optimized backend performance by caching dynamic queries, reducing dashboard runtime from 15 min to seconds",
+                "chunk_references": [
+                  "f9232e55-18a4-4070-bed0-552a31bb7185"
+                ],
+                "confidence": null
+              }
+            ]
+          },
+          {
+            "title": {
+              "value": "Instructional Assistant",
+              "chunk_references": [
+                "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+              ],
+              "confidence": 0.9999993295729129
+            },
+            "company": {
+              "value": "UC San Diego \u2013 Hal\u0131c\u0131o\u011flu Data Science Institute",
+              "chunk_references": [
+                "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+              ],
+              "confidence": 0.643625898700941
+            },
+            "location": {
+              "value": "San Diego, CA",
+              "chunk_references": [
+                "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+              ],
+              "confidence": 0.9749128989286884
+            },
+            "start_date": {
+              "value": "2023-09",
+              "chunk_references": [
+                "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+              ],
+              "confidence": null
+            },
+            "end_date": {
+              "value": "2025-03",
+              "chunk_references": [
+                "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+              ],
+              "confidence": null
+            },
+            "responsibilities": [
+              {
+                "value": "Tutored 1000+ students, improving understanding of different machine learning models through discussion sessions",
+                "chunk_references": [
+                  "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Utilized students tutoring session feedback, improving Java, Data Structures, and debugging knowledge retainment",
+                "chunk_references": [
+                  "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Created version control system project, aiding students to understand Git using simplified write-up approaches",
+                "chunk_references": [
+                  "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917"
+                ],
+                "confidence": null
+              }
+            ]
+          }
+        ],
+        "projects": [
+          {
+            "name": {
+              "value": "Radiographic Enhanced Sepsis Detection System",
+              "chunk_references": [
+                "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+              ],
+              "confidence": 0.9999968263007645
+            },
+            "technologies": [
+              {
+                "value": "Python",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 0.9999998063873693
+              },
+              {
+                "value": "TensorFlow",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 0.9999996127747761
+              },
+              {
+                "value": "AWS",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "CatBoost",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 0.9999996871837232
+              },
+              {
+                "value": "React",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 1.0
+              }
+            ],
+            "description": [
+              {
+                "value": "Utilized chest Xrays & lab test to train an early sepsis detection model achieving 0.88 AUC using SageMaker",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Processed and integrated MIMIC-IV and MIMIC-CXR datasets using SQL and probabilistic imputation techniques",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 0.9997184475477008
+              },
+              {
+                "value": "Engineered ResNet-50 CNN model achieving 96% recall for pneumonia by fine-tuning transfer learning architecture",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Deployed model using AWS ECS, automating updates via EventBridge and Lambda for smooth integration",
+                "chunk_references": [
+                  "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a"
+                ],
+                "confidence": 0.9999998063873693
+              }
+            ]
+          },
+          {
+            "name": {
+              "value": "Sepsis Clustering in ICU Patients",
+              "chunk_references": [
+                "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+              ],
+              "confidence": 0.6537116595722524
+            },
+            "technologies": [
+              {
+                "value": "R",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9994384268051153
+              },
+              {
+                "value": "PostgreSQL",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9999984951481292
+              },
+              {
+                "value": "Docker",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9999994487765022
+              },
+              {
+                "value": "Git",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9999998063873693
+              }
+            ],
+            "description": [
+              {
+                "value": "Replicated a research paper on multimorbidity & sepsis in ICU patients, analyzing 36,000+ EHRs of MIMIC-III",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Trained latent class analysis to identify patient subgroups, connecting different risks for organ dysfunction and sepsis",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 1.0
+              },
+              {
+                "value": "Created network visualization to highlight critical multimorbidity patterns, aiding in subgroups labeling, using ggraph",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9999868732492094
+              },
+              {
+                "value": "Documented reproducibility processes in GitHub, ensuring robust methodologies tracking in the MIMIC-III analysis",
+                "chunk_references": [
+                  "0de66f1d-b1a9-45b4-8868-9a3530f1ff82"
+                ],
+                "confidence": 0.9999871116535745
+              }
+            ]
+          },
+          {
+            "name": {
+              "value": "League of Legends: Winning Prediction",
+              "chunk_references": [
+                "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+              ],
+              "confidence": null
+            },
+            "technologies": [
+              {
+                "value": "Sci-kit learn",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": 0.9992895789906452
+              },
+              {
+                "value": "Pandas",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": 0.9999917005724162
+              },
+              {
+                "value": "Numpy",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": 0.999997064707474
+              },
+              {
+                "value": "Plotly",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": 0.9999996871837232
+              }
+            ],
+            "description": [
+              {
+                "value": "Implemented a Random Forest Classifier to predict match outcomes, using GridSearchCV for parameter tuning",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Achieved a 34% increase to prediction accuracy by integrating champion-specific statistics and team dynamics",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": null
+              },
+              {
+                "value": "Discovered that in lane to lane comparisons, support roles have an inverse relationship between kills and win-rate",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": 0.9984922700372787
+              },
+              {
+                "value": "Conducted permutation test to evaluate model bias across team sides, assessing the fairness of the model",
+                "chunk_references": [
+                  "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a"
+                ],
+                "confidence": null
+              }
+            ]
+          }
+        ],
+        "skills": {
+          "languages": [
+            {
+              "value": "Python",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9994655793536434
+            },
+            {
+              "value": "Java",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "SQL",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "TypeScript",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "frameworks": [
+            {
+              "value": "Spark",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999949190498161
+            },
+            {
+              "value": "Dask",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999984951481292
+            },
+            {
+              "value": "TensorFlow",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999998063873693
+            },
+            {
+              "value": "Streamlit",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999995679801056
+            },
+            {
+              "value": "JUnit",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "GitHub Actions CI/CD",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "tools": [
+            {
+              "value": "Git",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Docker",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999995679801056
+            },
+            {
+              "value": "VS Code",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "IntelliJ",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999962302845802
+            },
+            {
+              "value": "Firebase",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Jira",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Tableau",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            }
+          ],
+          "libraries": [
+            {
+              "value": "Pandas",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999993295729129
+            },
+            {
+              "value": "NumPy",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Plotly",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Sklearn",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999706467153259
+            },
+            {
+              "value": "Seaborn",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "D3.js",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            },
+            {
+              "value": "Scipy",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 0.9999783499621914
+            },
+            {
+              "value": "Keras",
+              "chunk_references": [
+                "3f474489-e4af-43ed-a25b-2a3d787525d9"
+              ],
+              "confidence": 1.0
+            }
+          ]
+        }
+      },
+      "chunks": [
+        {
+          "text": "# Ahmed Mostafa\n2141 Virginia St, Berkeley, CA, United States",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.31135302782058716,
+                "t": 0.03798716887831688,
+                "r": 0.6867164373397827,
+                "b": 0.0894414484500885
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "939db8f9-d3c8-43ff-aade-c3bd98bcf182",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "(949) 426-5899 | ahmostafa@berkeley.edu | linkedin.com/in/ahmed-mostafa147 | github.com/ahmostafa147",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.1141819953918457,
+                "t": 0.08788089454174042,
+                "r": 0.8864727020263672,
+                "b": 0.10859677195549011
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "88a517a2-5116-4e86-9f23-57919a2774c7",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Education\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nUniversity of California, Berkeley                                                      Aug. 2025 - May 2026\n*M.Eng. in Electrical Engineering & Computer Science*",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.053362131118774414,
+                "t": 0.11161006987094879,
+                "r": 0.9466677904129028,
+                "b": 0.17450354993343353
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "a3d75736-7ce6-4fb6-8261-079354fbd6fb",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "**University of California, San Diego**                                                    **Sep. 2022 - March 2025**  \n*B.S. in Data Science, Minor in Mathematics*                                   *GPA: 4.0/4.0*  \n**Relevant Coursework:**  \nData Structures & Algorithms, Machine Learning, Systems for Scalable Analytics, Agentic AI, Responsible Data Science",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.0531524121761322,
+                "t": 0.17640596628189087,
+                "r": 0.9474650621414185,
+                "b": 0.24312320351600647
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "9b2a7578-67dd-479c-8ab8-7b30d8e525fd",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Experience\n\nMachine Learning Intern                                                    June 2024 \u2013 Sep. 2024\nCarsXE                                                                     Highland, MD\n- \u2022 Deployed regression car valuation model aiding customer assessment of vehicle prices, using Streamlit and Sklearn\n- \u2022 Developed automated pipelines integrating multiple **RESTful APIs**, streamlining data for model training\n- \u2022 Performed exploratory data analysis, reducing feature space and memory usage by **54%**, using Seaborn and Pandas",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.053867191076278687,
+                "t": 0.24720466136932373,
+                "r": 0.946103572845459,
+                "b": 0.3615046739578247
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "78b04d16-7b57-4add-8a21-a0f7948b08ed",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Software Engineering Intern\n_CarsXE_\n\n- Developed **full-stack** user monitoring system using Python, implementing analytics to identify growth opportunities\n- Engineered API data validation step, enhancing reliability through systematic consistency checks and error handling\n- Optimized backend performance by caching dynamic queries, reducing dashboard runtime from **15 min to seconds**\n\nJune 2023 \u2013 Sep. 2023  \n_Highland, MD_",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.05443459749221802,
+                "t": 0.36222726106643677,
+                "r": 0.9474168419837952,
+                "b": 0.45200037956237793
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "f9232e55-18a4-4070-bed0-552a31bb7185",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "**Instructional Assistant**  \n_UC San Diego \u2013 Hal\u0131c\u0131o\u011flu Data Science Institute_  \n\n- \u2022 Tutored **1000+ students**, improving understanding of different machine learning models through discussion sessions\n- \u2022 Utilized students tutoring session feedback, improving **Java**, Data Structures, and **debugging** knowledge retainment\n- \u2022 Created **version control system** project, aiding students to understand Git using simplified write-up approaches\n\n**Sep. 2023 \u2013 March 2025**  \n_San Diego, CA_",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.05430421233177185,
+                "t": 0.4519755244255066,
+                "r": 0.9463952779769897,
+                "b": 0.5420970916748047
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "cbc7f455-bdf3-4cba-8f25-b0eb2f2a4917",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Projects\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n- **Radiographic Enhanced Sepsis Detection System** \u2014 _Python, TensorFlow, AWS, CatBoost, React_\n  - \u2022 Utilized chest Xrays & lab test to train an early sepsis detection model achieving **0.88 AUC** using SageMaker\n  - \u2022 Processed and integrated MIMIC-IV and MIMIC-CXR datasets using SQL and probabilistic imputation techniques\n  - \u2022 Engineered ResNet-50 CNN model achieving **96% recall** for pneumonia by fine-tuning transfer learning architecture\n  - \u2022 Deployed model using AWS ECS, automating updates via EventBridge and Lambda for smooth integration",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.05296334624290466,
+                "t": 0.5433361530303955,
+                "r": 0.941516637802124,
+                "b": 0.6682950258255005
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "1458708b-e7b5-4ba0-acee-8ab7fdc5c47a",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "- Sepsis Clustering in ICU Patients | *R, PostgreSQL, Docker, Git*\n  - \u2022 Replicated a research paper on multimorbidity & sepsis in ICU patients, analyzing **36,000**+ EHRs of MIMIC-III\n  - \u2022 Trained latent class analysis to identify patient subgroups, connecting different risks for organ dysfunction and sepsis\n  - \u2022 Created network visualization to highlight critical multimorbidity patterns, aiding in subgroups labeling, using ggraph\n  - \u2022 Documented reproducibility processes in GitHub, ensuring robust methodologies tracking in the MIMIC-III analysis",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.054561346769332886,
+                "t": 0.6698477268218994,
+                "r": 0.9412933588027954,
+                "b": 0.7667715549468994
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "0de66f1d-b1a9-45b4-8868-9a3530f1ff82",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "- \u2022 League of Legends: **Winning Prediction** | _Sci-kit learn, Pandas, Numpy, Plotly_\n  - \u2022 Implemented a **Random Forest Classifier** to predict match outcomes, using **GridSearchCV** for parameter tuning\n  - \u2022 **Achieved a 34% increase to prediction accuracy** by integrating champion-specific statistics and team dynamics\n  - \u2022 Discovered that in lane to lane comparisons, support roles have an inverse relationship between kills and win-rate\n  - \u2022 Conducted **permutation test** to evaluate model bias across team sides, assessing the fairness of the model",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.05483624339103699,
+                "t": 0.7691139578819275,
+                "r": 0.9376813173294067,
+                "b": 0.8650273680686951
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "17a1ad5e-39cb-4f9a-b722-1b4cc20c795a",
+          "rotation_angle": 0.0
+        },
+        {
+          "text": "Technical Skills\n________________________________________________________________________________\n\nLanguages: Python, Java, SQL, TypeScript\nFrameworks: Spark, Dask, TensorFlow, Streamlit, JUnit, GitHub Actions CI/CD\nDeveloper Tools: Git, Docker, VS Code, IntelliJ, Firebase, Jira, Tableau\nLibraries: Pandas, NumPy, Plotly, Sklearn, Seaborn, D3.js, Scipy, Keras",
+          "grounding": [
+            {
+              "box": {
+                "l": 0.05389782786369324,
+                "t": 0.8659954071044922,
+                "r": 0.676690936088562,
+                "b": 0.9553689956665039
+              },
+              "page": 0
+            }
+          ],
+          "chunk_type": "text",
+          "chunk_id": "3f474489-e4af-43ed-a25b-2a3d787525d9",
+          "rotation_angle": 0.0
+        }
+      ]
+    },
+    "errors": [],
+    "extraction_error": null,
+    "metadata": {
+      "parse_id": "mg271kf3zds97yyd2agkuiutl",
+      "page_count": 1,
+      "processed_at": "2025-10-03T20:02:33.139539+00:00",
+      "pages_processed": 1,
+      "processing_time_ms": 25912,
+      "filename": "Ahmed Resume ML.pdf",
+      "user_id": "cl6txjmqvqcu",
+      "pages_rotation_angles": {
+        "0": 0.0
+      }
+    }
+  }
+}
