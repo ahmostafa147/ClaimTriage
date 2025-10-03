@@ -1,0 +1,62 @@
+{
+  "file_id": "6d53e9fe-5f25-4b07-bf78-364b640f6e33",
+  "filename": "claim_auto_002.pdf",
+  "claimant_name": "Standard Claimant",
+  "policy_id": "POL-2024-685",
+  "incident_date": "2024-03-01",
+  "claim_amount_total_usd": 3349.8308500358394,
+  "injury_severity": "minor",
+  "incident_type": "auto",
+  "repeat_claims_count": 0,
+  "adverse_keywords": [],
+  "extracted_tables": [
+    {
+      "item": "Vehicle Damage",
+      "amount": "$3,500"
+    }
+  ],
+  "bboxes": {
+    "claimant_name": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 150,
+        "x1": 300,
+        "y1": 170
+      }
+    ],
+    "policy_id": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 180,
+        "x1": 300,
+        "y1": 200
+      }
+    ],
+    "incident_date": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 210,
+        "x1": 300,
+        "y1": 230
+      }
+    ],
+    "claim_amount_total_usd": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 240,
+        "x1": 300,
+        "y1": 260
+      }
+    ]
+  },
+  "confidences": {
+    "claimant_name": 0.8951276526743954,
+    "policy_id": 0.9758028526328016,
+    "incident_date": 0.8806196974327164,
+    "claim_amount_total_usd": 0.8764803566941349
+  }
+}

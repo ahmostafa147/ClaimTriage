@@ -1,0 +1,26 @@
+version: 1
+rules:
+  - name: litigation_high_amount
+    when: "claim_amount_total_usd is not None and claim_amount_total_usd >= 50000"
+    route: "litigation"
+    rationale: "High amount >= 50k triggers litigation review"
+  - name: severe_injury
+    when: "injury_severity == 'severe'"
+    route: "adjuster_senior"
+    rationale: "Severe injury requires senior adjuster"
+  - name: suspected_fraud
+    when: "repeat_claims_count >= 2 or any_kw(['staged', 'prior loss', 'inconsistent story', 'suspicious'])"
+    route: "fraud_queue"
+    rationale: "Repeat claims or fraud keywords detected"
+  - name: low_confidence_handoff
+    when: "missing(['claim_amount_total_usd', 'incident_date'])"
+    route: "human_review"
+    rationale: "Key fields missing or low confidence"
+  - name: high_amount_senior
+    when: "claim_amount_total_usd is not None and claim_amount_total_usd >= 10000"
+    route: "adjuster_senior"
+    rationale: "High amount requires senior review"
+  - name: default
+    when: "True"
+    route: "adjuster_junior"
+    rationale: "No risk signals, standard processing"

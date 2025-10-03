@@ -1,0 +1,62 @@
+{
+  "file_id": "01eccdfc-54b7-4de4-ae72-2d52bbf1d13d",
+  "filename": "claim_severe_003.pdf",
+  "claimant_name": "Severe Injury Claimant",
+  "policy_id": "POL-2024-515",
+  "incident_date": "2024-02-20",
+  "claim_amount_total_usd": 69695.93242836365,
+  "injury_severity": "severe",
+  "incident_type": "auto",
+  "repeat_claims_count": 0,
+  "adverse_keywords": [],
+  "extracted_tables": [
+    {
+      "item": "Medical",
+      "amount": "$75,000"
+    }
+  ],
+  "bboxes": {
+    "claimant_name": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 150,
+        "x1": 300,
+        "y1": 170
+      }
+    ],
+    "policy_id": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 180,
+        "x1": 300,
+        "y1": 200
+      }
+    ],
+    "incident_date": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 210,
+        "x1": 300,
+        "y1": 230
+      }
+    ],
+    "claim_amount_total_usd": [
+      {
+        "page": 0,
+        "x0": 100,
+        "y0": 240,
+        "x1": 300,
+        "y1": 260
+      }
+    ]
+  },
+  "confidences": {
+    "claimant_name": 0.8899580446304061,
+    "policy_id": 0.9415431991986539,
+    "incident_date": 0.8744269040057787,
+    "claim_amount_total_usd": 0.8772939033472051
+  }
+}
