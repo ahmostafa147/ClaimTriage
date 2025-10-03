@@ -7,10 +7,18 @@ from collections import defaultdict
 import threading
 
 from schema import StructuredClaim, RoutingDecision
-from ade_client import MockExtractor, ADEExtractor
+from ade_client import ADEExtractor
 from rule_engine import RuleEngine
 from metrics import MetricsTracker, Timer
 from storage import sha256_file
+
+# Import Pathway pipeline
+try:
+    from simple_pathway import SimplePathwayPipeline
+    PATHWAY_AVAILABLE = True
+except ImportError:
+    PATHWAY_AVAILABLE = False
+    print("Warning: Pathway pipeline not available")
 
 
 class ClaimsPipeline:
@@ -21,16 +29,13 @@ class ClaimsPipeline:
         self.inbox_dir = Path(inbox_dir)
         self.inbox_dir.mkdir(parents=True, exist_ok=True)
 
-        # Initialize extractor based on mode
-        if app_mode == "PROD":
-            api_key = os.getenv("LANDINGAI_API_KEY")
-            if api_key:
-                self.extractor = ADEExtractor(api_key)
-            else:
-                print("Warning: LANDINGAI_API_KEY not found, falling back to MOCK mode")
-                self.extractor = MockExtractor()
-        else:
-            self.extractor = MockExtractor()
+        # Initialize REAL ADE extractor - NO MOCK MODE
+        api_key = os.getenv("LANDINGAI_API_KEY")
+        if not api_key:
+            raise ValueError("LANDINGAI_API_KEY is REQUIRED - no mock mode allowed")
+        
+        self.extractor = ADEExtractor(api_key)
+        print("✅ Using REAL LandingAI ADE API - NO MOCK CODE")
 
         # Initialize rule engine
         self.rule_engine = RuleEngine()
@@ -53,10 +58,11 @@ class ClaimsPipeline:
         if not file_path.exists():
             return None
 
-        # Skip if already processed
+        # Skip if already processed (but allow reprocessing for demo)
         file_hash = sha256_file(file_path)
         if file_hash in self.processed_files:
-            return None
+            # For demo purposes, allow reprocessing with a new file_id
+            print(f"File {file_path} already processed, but allowing reprocessing for demo")
 
         try:
             # Extract
@@ -171,13 +177,30 @@ _pipeline_instance: ClaimsPipeline | None = None
 _pipeline_lock = threading.Lock()
 
 
-def get_pipeline(app_mode: str = "MOCK") -> ClaimsPipeline:
-    """Get or create global pipeline instance."""
+def get_pipeline(app_mode: str = "MOCK", use_pathway: bool = False) -> ClaimsPipeline:
+    """Get or create global pipeline instance.
+
+    Args:
+        app_mode: Either "MOCK" or "PROD"
+        use_pathway: If True and PATHWAY_AVAILABLE, use streaming Pathway pipeline
+
+    Returns:
+        Pipeline instance (either ClaimsPipeline or PathwayClaimsPipeline)
+    """
     global _pipeline_instance
 
     with _pipeline_lock:
         if _pipeline_instance is None:
-            _pipeline_instance = ClaimsPipeline(app_mode=app_mode)
+            # Decide which pipeline to use
+            if use_pathway and PATHWAY_AVAILABLE:
+                print("Using Pathway streaming pipeline")
+                _pipeline_instance = SimplePathwayPipeline(app_mode=app_mode)
+                # Start the streaming pipeline
+                _pipeline_instance.start()
+            else:
+                if use_pathway and not PATHWAY_AVAILABLE:
+                    print("Pathway requested but not available, using standard pipeline")
+                _pipeline_instance = ClaimsPipeline(app_mode=app_mode)
 
         return _pipeline_instance
 

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1eb85cbd-e33c-47c3-be9c-1f493cd7f2dc",
+    "filename": "1a33581f_claim_auto_002.pdf",
+    "claimant_name": "John Smith",
+    "policy_id": "POL-2024-001",
+    "incident_date": "2024-01-15",
+    "claim_amount_total_usd": 3200.0,
+    "injury_severity": "minor",
+    "incident_type": "auto",
+    "repeat_claims_count": 0,
+    "adverse_keywords": [],
+    "confidences": {
+      "claimant_name": 0.93,
+      "policy_id": 0.9,
+      "incident_date": 0.87,
+      "claim_amount_total_usd": 0.89
+    }
+  }
+]

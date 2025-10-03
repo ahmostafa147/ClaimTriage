@@ -1,0 +1,1 @@
+{"extraction":{"p50":0.10524170857388526,"p95":0.1052924087154679,"mean":0.10524170857388526,"count":2},"routing":{"p50":0.0004808545345440507,"p95":0.0005754486075602472,"mean":0.0004808545345440507,"count":2},"total_claims":2,"route_distribution":{},"queues":{"litigation":1,"adjuster_junior":1}}

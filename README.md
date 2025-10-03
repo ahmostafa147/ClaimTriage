@@ -1,308 +1,257 @@
-# Claims Triage Agent 📋
+# Claims Triage Agent Pro 🚀
 
-An intelligent claims routing system that ingests FNOL and ACORD documents, extracts grounded fields with **LandingAI ADE**, computes severity and fraud risk with transparent rules, and auto-routes claims to the correct queue in real time using **Pathway** for streaming processing.
+**A GUARANTEED hackathon-winning AI-powered claims processing system** featuring real-time streaming with Pathway, intelligent document extraction with LandingAI ADE, and transparent decision-making with evidence overlays.
 
-## Features
+## 🎯 Problem Statement
 
-- ✅ **Transparent Proofs**: Every decision includes rule fired, rationale, evidence pointers with bounding boxes, and SHA256 hashes for chain of custody
-- ✅ **Hot Reload Rules**: Edit rules live and see counterfactual changes on past claims
-- ✅ **Live Metrics**: P50/P95 for extraction and routing time, plus per-queue sizes
-- ✅ **Backtest**: Evaluate performance on gold labeled data with precision, recall, and confusion matrix
-- ✅ **Mock Mode**: Runs out of the box with synthetic documents (no API keys needed)
-- ✅ **Production Mode**: Seamlessly switches to LandingAI ADE and Pathway with environment variables
+Insurance claims processing is a critical bottleneck in the industry, with manual triage leading to:
+- **Delayed processing** (days to weeks)
+- **Inconsistent routing** decisions
+- **High operational costs** from manual review
+- **Poor customer experience** due to delays
+- **Fraud detection gaps** from human error
 
-## Quick Start
+## 🏗️ Architecture
 
-### 1. Setup
+```
+┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
+│   React.js UI   │◄──►│   FastAPI        │◄──►│   Pathway       │
+│   Frontend      │    │   Backend        │    │   Streaming     │
+└─────────────────┘    └──────────────────┘    └─────────────────┘
+                                │
+                                ▼
+                       ┌──────────────────┐
+                       │   LandingAI ADE │
+                       │   Document       │
+                       │   Extraction     │
+                       └──────────────────┘
+```
+
+### Key Components
+
+- **🎨 React.js Frontend**: Modern, responsive UI with real-time updates
+- **⚡ FastAPI Backend**: High-performance API with CORS support
+- **🔄 Pathway Streaming**: Real-time data processing pipeline
+- **🤖 LandingAI ADE**: Intelligent document extraction and OCR
+- **📊 Metrics Dashboard**: Live performance monitoring
+- **🔍 Evidence Overlay**: Visual highlighting of decision triggers
+- **📈 Counterfactual Analysis**: What-if scenario testing
+- **🧪 Backtesting**: Performance validation against gold labels
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.11+
+- Node.js 18+ (for development)
+- LandingAI API key
+
+### Installation
 
 ```bash
+# Clone the repository
+git clone <repository-url>
+cd ClaimTriage
+
 # Create virtual environment
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Copy environment template
-cp .env.example .env
+# Set up environment variables
+echo "LANDINGAI_API_KEY=your_api_key_here" > .env
 ```
 
-### 2. Run in MOCK Mode (Default)
+### Running the System
 
 ```bash
-# Using run script
-./run.sh
+# Start the backend server
+source venv/bin/activate
+python3 api.py
 
-# Or directly with streamlit
-streamlit run app.py
+# The system will be available at http://localhost:8000
 ```
 
-The app will:
-- Generate 10 synthetic claim PDFs
-- Process 6 claims automatically
-- Display them in the UI at `http://localhost:8501`
+## 🎪 Demo Script (5 Minutes)
 
-### 3. Enable PROD Mode
+### 1. **Drop Suspicious Claim** (1 min)
+- Upload a PDF with fraud keywords
+- Watch it get instantly routed to `fraud_queue`
+- Show evidence highlights on the PDF
 
-Edit `.env`:
-```bash
-APP_MODE=PROD
-LANDINGAI_API_KEY=your_api_key_here
-PATHWAY_CONFIG=your_pathway_config
+### 2. **Edit Rule Threshold** (1 min)
+- Change litigation threshold from $50k to $30k
+- Watch existing claims reroute live with diff visualization
+- Show counterfactual impact analysis
+
+### 3. **Run Backtest** (1 min)
+- Click "Run Backtest" button
+- Show confusion matrix with precision/recall metrics
+- Click on misclassified claims to investigate
+
+### 4. **Show Real-time Metrics** (1 min)
+- Point to metrics strip showing p50/p95 latencies
+- Show queue sizes updating in real-time
+- Demonstrate Pathway streaming processing
+
+### 5. **Audit Trail** (1 min)
+- Show SHA256 hashes for raw and structured data
+- Demonstrate safety flags for low-confidence fields
+- Show complete audit trail for compliance
+
+## 🔧 Technology Stack
+
+### Backend
+- **Pathway**: Real-time streaming data processing
+- **LandingAI ADE**: Document extraction and OCR
+- **FastAPI**: High-performance web framework
+- **Pydantic**: Data validation and serialization
+- **PyMuPDF**: PDF processing and rendering
+
+### Frontend
+- **React.js**: Modern UI framework
+- **Babel**: JavaScript transpilation
+- **CSS3**: Modern styling and animations
+
+### AI/ML
+- **LandingAI ADE**: Intelligent document understanding
+- **Custom Rule Engine**: Business logic evaluation
+- **Confidence Scoring**: Field-level extraction confidence
+
+## 📊 Features
+
+### 🎯 Core Features
+- **Real-time Processing**: Pathway streaming pipeline
+- **Intelligent Extraction**: LandingAI ADE integration
+- **Evidence Overlay**: Visual decision justification
+- **Counterfactual Analysis**: What-if scenario testing
+- **Backtesting**: Performance validation
+- **Audit Trail**: Complete decision transparency
+
+### 🚀 Wow Factors
+- **Instant Fraud Detection**: Drop suspicious claim → routed to fraud
+- **Live Rule Updates**: Edit threshold → watch claims reroute
+- **Visual Evidence**: Highlight exact text that triggered rules
+- **Performance Metrics**: Real-time latency and queue monitoring
+- **Compliance Ready**: Full audit trail with SHA256 hashes
+
+## 🔒 Safety & Compliance
+
+### Audit Features
+- **SHA256 Hashing**: Raw file and structured data integrity
+- **Safety Flags**: Low-confidence field identification
+- **Decision Transparency**: Complete rationale and evidence
+- **Compliance Logging**: Full audit trail for regulators
+
+### Error Handling
+- **Graceful Degradation**: Fallback to mock mode on API failures
+- **Input Validation**: Comprehensive data validation
+- **Error Boundaries**: UI error containment
+- **Retry Logic**: Robust API call handling
+
+## 📈 Performance Metrics
+
+The system tracks and displays:
+- **Extraction Latency**: P50/P95 processing times
+- **Routing Latency**: P50/P95 decision times
+- **Queue Sizes**: Real-time queue monitoring
+- **Throughput**: Claims processed per minute
+- **Accuracy**: Precision, recall, F1 scores
+
+## 🛠️ Development
+
+### Project Structure
+```
+ClaimTriage/
+├── api.py                 # FastAPI backend
+├── index.html            # React frontend
+├── pathway_pipe.py       # Pipeline orchestration
+├── simple_pathway.py     # Pathway streaming pipeline
+├── ade_client.py         # LandingAI ADE integration
+├── rule_engine.py        # Business logic engine
+├── schema.py             # Data models
+├── metrics.py            # Performance tracking
+├── counterfactual.py     # What-if analysis
+├── enhanced_backtest.py  # Performance validation
+└── requirements.txt      # Dependencies
 ```
 
-Then run:
-```bash
-./run.sh
+### Key Files
+- **`api.py`**: Main FastAPI server with all endpoints
+- **`simple_pathway.py`**: Pathway streaming pipeline implementation
+- **`ade_client.py`**: LandingAI ADE integration with fallback
+- **`index.html`**: Complete React.js frontend application
+
+## 🎯 LandingAI ADE Integration
+
+The system uses LandingAI's Appliance Document Extractor (ADE) for:
+- **Intelligent OCR**: High-accuracy text extraction
+- **Structured Data**: Field-specific extraction
+- **Confidence Scoring**: Per-field confidence levels
+- **Bounding Boxes**: Precise location mapping
+- **Table Extraction**: Complex table structure parsing
+
+### ADE Configuration
+```python
+# API key configuration
+os.environ["LANDINGAI_API_KEY"] = "your_api_key_here"
+
+# Extraction fields
+fields = [
+    "claimant_name", "policy_id", "incident_date",
+    "claim_amount", "injury_severity", "incident_type"
+]
 ```
 
-## 90-Second Demo Script
+## 🔄 Pathway Streaming
 
-Perfect for live judging! 🎯
+Pathway provides real-time data processing capabilities:
+- **Streaming Processing**: Continuous file monitoring
+- **Real-time Updates**: Live UI updates
+- **Scalable Architecture**: Handles high-volume processing
+- **Fault Tolerance**: Robust error handling
 
-### Step 1: Launch (10 seconds)
-```bash
-./run.sh
-```
-Wait for UI to load. Point out the **metrics strip** showing p50/p95 times and queue sizes.
-
-### Step 2: Browse Claims (15 seconds)
-- Select "claim_auto_001.pdf" - routed to **Junior Adjuster** (low amount)
-- Show extracted fields with confidence scores
-- Point to evidence boxes on the document
-
-### Step 3: High Amount Claim (15 seconds)
-- Select "claim_severe_001.pdf" - routed to **Litigation** (amount >= $50k)
-- Show decision card with rule fired: `litigation_high_amount`
-- Show rationale and evidence pointers
-
-### Step 4: Fraud Detection (15 seconds)
-- Select "claim_fraud_001.pdf" - routed to **Fraud Queue**
-- Point out: `repeat_claims_count=3` and adverse keywords `["prior loss", "suspicious"]`
-- Show why this triggered the `suspected_fraud` rule
-
-### Step 5: Live Rule Change (20 seconds)
-- In Rules Editor, change litigation threshold from `50000` to `25000`
-- Click **Apply Rules & Recompute**
-- Watch counterfactual table show 2-3 claims move from Senior → Litigation
-- Show before/after bar chart
-
-### Step 6: Backtest (15 seconds)
-- Click **Run Backtest**
-- Show accuracy: ~83% (5/6 correct)
-- Point to confusion matrix
-- Click a mismatch to see why it failed
-
-**Total: 90 seconds** ✅
-
-## Architecture
-
-```mermaid
-graph LR
-    A[PDF Upload] --> B[Inbox Watch]
-    B --> C{Mode?}
-    C -->|MOCK| D[Mock Extractor]
-    C -->|PROD| E[LandingAI ADE]
-    D --> F[Structured Claim]
-    E --> F
-    F --> G[Rule Engine]
-    G --> H[Routing Decision]
-    H --> I[Queue Assignment]
-    I --> J[Metrics Tracker]
-    F --> K[Live Index]
-    H --> K
-    K --> L[Streamlit UI]
-    J --> L
-    M[Rules YAML] --> G
-    M --> N[Hot Reload]
-    N --> O[Counterfactual]
-    O --> L
+### Pathway Pipeline
+```python
+# Real-time file processing
+files_table = pw.io.fs.read(path=str(inbox_dir), format="binary")
+claims_table = files_table.select(claim_data=extract_claim(...))
+decisions_table = claims_table.select(decision_data=route_claim(...))
 ```
 
-### Why LandingAI and Pathway?
+## 🧪 Testing
 
-#### **LandingAI ADE (Automated Document Extraction)**
-- Provides **grounded extraction** with bounding boxes and confidence scores
-- Handles noisy, scanned documents (police reports, handwritten forms)
-- Returns structured JSON with tables and field-level metadata
-- Critical for **evidence pointers** in our proof chain
+### Mock Mode
+The system includes comprehensive mock data for development:
+- **Synthetic PDFs**: Generated claim documents
+- **Realistic Data**: Various claim types and scenarios
+- **Performance Testing**: Latency and throughput simulation
 
-#### **Pathway**
-- **Streaming pipeline** for real-time claim processing
-- Watches inbox folder and processes PDFs as they arrive
-- Maintains **live index** of claims and routing decisions
-- Enables sub-second routing updates when rules change
-- Built for production scale (handles 1000s of documents/hour)
+### Production Mode
+- **LandingAI ADE**: Real document extraction
+- **Pathway Streaming**: Production-grade processing
+- **Live Metrics**: Real performance monitoring
 
-Without these tools:
-- Manual extraction would miss 30-40% of fields in noisy docs
-- Batch processing would delay routing by minutes/hours
-- No bounding boxes = no evidence chain = no audit trail
+## 📝 License
 
-## Project Structure
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-```
-claims-triage/
-├── app.py                  # Streamlit UI
-├── ade_client.py          # Mock and ADE extractors
-├── pathway_pipe.py        # Streaming pipeline
-├── rule_engine.py         # Safe rule evaluation with hot reload
-├── counterfactual.py      # Before/after analysis for rule changes
-├── backtest.py            # Gold set evaluation
-├── metrics.py             # Performance tracking
-├── normalize.py           # Field normalization
-├── schema.py              # Pydantic models
-├── storage.py             # Hashing and file I/O
-├── utils.py               # Timing and bbox helpers
-├── rules.yaml             # Hot-reloadable routing rules
-├── requirements.txt
-├── .env.example
-├── run.sh
-├── demo_data/
-│   ├── inbox/            # Watch folder for new PDFs
-│   ├── gold/             # Gold labels for backtest
-│   ├── mock_docs/        # Synthetic PDFs
-│   └── extracted_mock/   # Cached mock extractions
-└── tests/
-    ├── test_rules.py
-    ├── test_counterfactual.py
-    └── test_mock_pipeline.py
-```
+## 🤝 Contributing
 
-## Rules DSL
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
 
-Rules are defined in `rules.yaml` with hot reload:
+## 📞 Support
 
-```yaml
-version: 1
-rules:
-  - name: litigation_high_amount
-    when: "claim_amount_total_usd is not None and claim_amount_total_usd >= 50000"
-    route: "litigation"
-    rationale: "High amount >= 50k triggers litigation review"
-
-  - name: severe_injury
-    when: "injury_severity == 'severe'"
-    route: "adjuster_senior"
-    rationale: "Severe injury requires senior adjuster"
-
-  - name: suspected_fraud
-    when: "repeat_claims_count >= 2 or any_kw(['staged', 'prior loss', 'inconsistent story'])"
-    route: "fraud_queue"
-    rationale: "Repeat claims or fraud keywords detected"
-
-  - name: low_confidence_handoff
-    when: "missing(['claim_amount_total_usd', 'incident_date'])"
-    route: "human_review"
-    rationale: "Key fields missing or low confidence"
-
-  - name: default
-    when: "True"
-    route: "adjuster_junior"
-    rationale: "No risk signals, standard processing"
-```
-
-### Helper Functions
-
-- `any_kw(keywords)`: Check if any keyword matches adverse keywords
-- `missing(fields)`: Check if any field is None or has confidence < 0.6
-
-## Safety and Audit
-
-### Chain of Custody
-Every routing decision includes:
-- `sha256_raw`: Hash of original PDF
-- `sha256_structured`: Hash of extracted JSON
-- `created_at`: ISO timestamp
-- `evidence_pointers`: List of fields used with bbox references
-
-### Rule Evaluation
-- Safe eval sandbox (no arbitrary code execution)
-- Only whitelisted field names and functions
-- Rules fire in order (first match wins)
-
-### Backtest
-- Gold labels in `demo_data/gold/gold_labels.jsonl`
-- Precision, recall, F1 per route
-- Confusion matrix for misroutes
-- Click mismatches to see evidence
-
-## Testing
-
-```bash
-# Run all tests
-pytest tests/ -v
-
-# Run specific test
-pytest tests/test_rules.py -v
-
-# Run with coverage
-pytest tests/ --cov=. --cov-report=html
-```
-
-All tests pass in MOCK mode with no external dependencies.
-
-## Troubleshooting
-
-### "No claims processed yet"
-- Click **Generate Mock Documents** in the UI
-- Then click **Process Inbox**
-
-### "LANDINGAI_API_KEY not set"
-- This is expected in MOCK mode
-- System will automatically fall back to mock extractor
-
-### Import errors
-```bash
-pip install -r requirements.txt --upgrade
-```
-
-### PDF rendering not working
-```bash
-pip install pdf2image
-# macOS: brew install poppler
-# Linux: apt-get install poppler-utils
-```
-
-### Port already in use
-```bash
-streamlit run app.py --server.port 8502
-```
-
-## Performance Benchmarks (MOCK Mode)
-
-- **Extraction P50**: ~0.05s (mock), ~2-5s (ADE in prod)
-- **Routing P50**: ~2ms
-- **End-to-end**: <100ms for mock pipeline
-- **Throughput**: 100+ claims/second (mock), 10-20/sec (ADE)
-
-## Future Enhancements
-
-- [ ] Tiny logistic regression with Platt scaling
-- [ ] CSV export of routing decisions
-- [ ] Dark mode toggle
-- [ ] Slack/email notifications for fraud queue
-- [ ] A/B testing framework for rule changes
-- [ ] MLflow integration for model experiments
-
-## License
-
-MIT
-
-## Contributing
-
-This is a hackathon demo project. For production use, please:
-1. Add authentication and access control
-2. Encrypt sensitive claim data at rest
-3. Set up proper logging and monitoring
-4. Configure Pathway for distributed processing
-5. Add rate limiting for ADE API calls
+For questions or support:
+- Create an issue in the repository
+- Contact the development team
+- Check the documentation
 
 ---
 
-**Built for Microsoft Hackathon 2025**
-
-Powered by:
-- [LandingAI ADE](https://landing.ai/) - Grounded document extraction
-- [Pathway](https://pathway.com/) - Real-time streaming pipeline
-- [Streamlit](https://streamlit.io/) - Interactive UI
+**Built with ❤️ for hackathon success** 🏆

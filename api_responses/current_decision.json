@@ -1,0 +1,14 @@
+{
+  "route": "adjuster_junior",
+  "rule_fired": "default",
+  "rationale": [
+    "No risk signals, standard processing"
+  ],
+  "evidence_pointers": [],
+  "safety_flags": [],
+  "low_confidence_fields": [],
+  "sha256_raw": "97edf22ec22f2f524ae32736219b8aff1fb46d1613852857e37137d19dce5c2c",
+  "sha256_structured": "ab24f90d28cb2c88e0e8c228f60160d2a6353a0b8242deea50f4f3b7d2ec14fd",
+  "created_at": "2025-10-03T19:45:01.737217Z",
+  "decision_id": "4bb84025-4ded-404d-bf2e-efa5b01f4845"
+}

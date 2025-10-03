@@ -1,0 +1,60 @@
+{
+  "StructuredClaim": {
+    "fields": [
+      "file_id",
+      "filename",
+      "claimant_name",
+      "policy_id",
+      "incident_date",
+      "claim_amount_total_usd",
+      "injury_severity",
+      "incident_type",
+      "repeat_claims_count",
+      "adverse_keywords",
+      "extracted_tables",
+      "bboxes",
+      "confidences"
+    ],
+    "field_types": {
+      "file_id": "<class 'str'>",
+      "filename": "<class 'str'>",
+      "claimant_name": "str | None",
+      "policy_id": "str | None",
+      "incident_date": "str | None",
+      "claim_amount_total_usd": "float | None",
+      "injury_severity": "<class 'str'>",
+      "incident_type": "<class 'str'>",
+      "repeat_claims_count": "<class 'int'>",
+      "adverse_keywords": "list[str]",
+      "extracted_tables": "list[dict[str, typing.Any]]",
+      "bboxes": "dict[str, list[dict[str, typing.Any]]]",
+      "confidences": "dict[str, float]"
+    }
+  },
+  "RoutingDecision": {
+    "fields": [
+      "decision_id",
+      "file_id",
+      "route",
+      "rule_fired",
+      "model_score",
+      "rationale",
+      "evidence_pointers",
+      "sha256_raw",
+      "sha256_structured",
+      "created_at"
+    ],
+    "field_types": {
+      "decision_id": "<class 'str'>",
+      "file_id": "<class 'str'>",
+      "route": "<class 'str'>",
+      "rule_fired": "<class 'str'>",
+      "model_score": "float | None",
+      "rationale": "list[str]",
+      "evidence_pointers": "list[dict[str, typing.Any]]",
+      "sha256_raw": "<class 'str'>",
+      "sha256_structured": "<class 'str'>",
+      "created_at": "<class 'str'>"
+    }
+  }
+}

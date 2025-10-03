@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "description": "Gold standard labels for claims triage evaluation",
+  "claims": [
+    {
+      "file_id": "claim_auto_001.pdf",
+      "filename": "claim_auto_001.pdf",
+      "true_route": "adjuster_junior",
+      "claim_amount_total_usd": 3200.0,
+      "injury_severity": "minor",
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Standard auto claim with minor damage"
+    },
+    {
+      "file_id": "claim_auto_002.pdf", 
+      "filename": "claim_auto_002.pdf",
+      "true_route": "adjuster_junior",
+      "claim_amount_total_usd": 2800.0,
+      "injury_severity": "minor",
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Minor fender bender"
+    },
+    {
+      "file_id": "claim_auto_003.pdf",
+      "filename": "claim_auto_003.pdf", 
+      "true_route": "adjuster_junior",
+      "claim_amount_total_usd": 4500.0,
+      "injury_severity": "minor",
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Standard collision claim"
+    },
+    {
+      "file_id": "claim_severe_001.pdf",
+      "filename": "claim_severe_001.pdf",
+      "true_route": "litigation",
+      "claim_amount_total_usd": 87500.0,
+      "injury_severity": "severe",
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "High-value severe injury claim"
+    },
+    {
+      "file_id": "claim_severe_002.pdf",
+      "filename": "claim_severe_002.pdf",
+      "true_route": "litigation", 
+      "claim_amount_total_usd": 92000.0,
+      "injury_severity": "severe",
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Catastrophic injury claim"
+    },
+    {
+      "file_id": "claim_severe_003.pdf",
+      "filename": "claim_severe_003.pdf",
+      "true_route": "litigation",
+      "claim_amount_total_usd": 78500.0,
+      "injury_severity": "severe", 
+      "incident_type": "auto",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Major injury with high medical costs"
+    },
+    {
+      "file_id": "claim_fraud_001.pdf",
+      "filename": "claim_fraud_001.pdf",
+      "true_route": "fraud_queue",
+      "claim_amount_total_usd": 12500.0,
+      "injury_severity": "minor",
+      "incident_type": "auto",
+      "repeat_claims_count": 3,
+      "adverse_keywords": ["prior loss", "suspicious", "inconsistent story", "staged accident"],
+      "notes": "Suspicious claim with multiple red flags"
+    },
+    {
+      "file_id": "claim_fraud_002.pdf", 
+      "filename": "claim_fraud_002.pdf",
+      "true_route": "fraud_queue",
+      "claim_amount_total_usd": 18500.0,
+      "injury_severity": "minor",
+      "incident_type": "auto",
+      "repeat_claims_count": 2,
+      "adverse_keywords": ["staged", "prior loss"],
+      "notes": "Repeat claimant with staged accident indicators"
+    },
+    {
+      "file_id": "claim_property_001.pdf",
+      "filename": "claim_property_001.pdf",
+      "true_route": "property_specialist",
+      "claim_amount_total_usd": 18500.0,
+      "injury_severity": "none",
+      "incident_type": "property",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Water damage property claim"
+    },
+    {
+      "file_id": "claim_property_002.pdf",
+      "filename": "claim_property_002.pdf", 
+      "true_route": "property_specialist",
+      "claim_amount_total_usd": 22500.0,
+      "injury_severity": "none",
+      "incident_type": "property",
+      "repeat_claims_count": 0,
+      "adverse_keywords": [],
+      "notes": "Fire damage property claim"
+    }
+  ]
+}

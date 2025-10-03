@@ -9,6 +9,12 @@ from pathway_pipe import get_pipeline, reset_pipeline
 from counterfactual import CounterfactualAnalyzer
 from backtest import Backtester
 from schema import StructuredClaim, RoutingDecision
+from pdf_viewer_util import (
+    is_pdf_viewer_available,
+    render_pdf_page,
+    get_pdf_page_count,
+    render_pdf_with_evidence
+)
 
 
 # Page config
@@ -22,6 +28,8 @@ st.set_page_config(
 # Initialize session state
 if "app_mode" not in st.session_state:
     st.session_state.app_mode = os.getenv("APP_MODE", "MOCK")
+if "use_pathway" not in st.session_state:
+    st.session_state.use_pathway = os.getenv("USE_PATHWAY", "false").lower() == "true"
 if "pipeline_initialized" not in st.session_state:
     st.session_state.pipeline_initialized = False
 if "selected_claim_id" not in st.session_state:
@@ -37,14 +45,18 @@ if "rules_content" not in st.session_state:
 
 def initialize_pipeline():
     """Initialize pipeline and load data."""
-    pipeline = get_pipeline(st.session_state.app_mode)
+    pipeline = get_pipeline(
+        st.session_state.app_mode,
+        use_pathway=st.session_state.use_pathway
+    )
 
     if not st.session_state.pipeline_initialized:
         # Initialize mock data if needed
         pipeline.initialize_mock_data()
 
-        # Process inbox
-        pipeline.process_inbox()
+        # Process inbox (only for non-Pathway mode, Pathway streams automatically)
+        if not st.session_state.use_pathway:
+            pipeline.process_inbox()
 
         st.session_state.pipeline_initialized = True
 
@@ -125,6 +137,17 @@ def main():
             st.session_state.pipeline_initialized = False
             reset_pipeline()
             st.rerun()
+
+        # Pathway toggle
+        use_pathway = st.checkbox("Use Pathway Streaming", value=st.session_state.use_pathway)
+        if use_pathway != st.session_state.use_pathway:
+            st.session_state.use_pathway = use_pathway
+            st.session_state.pipeline_initialized = False
+            reset_pipeline()
+            st.rerun()
+
+        if st.session_state.use_pathway:
+            st.info("🔄 Real-time streaming enabled with Pathway")
 
         # Process inbox button
         if st.button("Process Inbox"):
@@ -226,8 +249,76 @@ def main():
                                 evidence_fields = [e["field"] for e in decision.evidence_pointers]
                                 st.write(", ".join(set(evidence_fields)))
 
-                        # PDF rendering would go here
-                        st.info("PDF preview: Install pdf2image for page rendering")
+                        # PDF rendering
+                        if is_pdf_viewer_available():
+                            st.markdown("---")
+
+                            # Page selector
+                            page_count = get_pdf_page_count(pdf_path)
+                            if page_count > 1:
+                                page_number = st.slider(
+                                    "Page",
+                                    min_value=0,
+                                    max_value=page_count - 1,
+                                    value=0,
+                                    key=f"page_slider_{selected_id}"
+                                )
+                            else:
+                                page_number = 0
+
+                            # Render options
+                            col1, col2 = st.columns([1, 1])
+                            with col1:
+                                dpi = st.selectbox(
+                                    "Quality",
+                                    [100, 150, 200],
+                                    index=1,
+                                    key=f"dpi_{selected_id}"
+                                )
+                            with col2:
+                                show_evidence = st.checkbox(
+                                    "Highlight Evidence",
+                                    value=False,
+                                    key=f"evidence_{selected_id}"
+                                )
+
+                            # Render PDF page
+                            with st.spinner("Rendering PDF..."):
+                                if show_evidence and decision and decision.evidence_pointers:
+                                    image = render_pdf_with_evidence(
+                                        pdf_path,
+                                        decision.evidence_pointers,
+                                        page_number,
+                                        dpi,
+                                        claim.bboxes
+                                    )
+                                else:
+                                    image = render_pdf_page(pdf_path, page_number, dpi)
+
+                                if image:
+                                    st.image(image, use_container_width=True)
+
+                                    # Legend for evidence colors
+                                    if show_evidence:
+                                        st.markdown("**Evidence Legend:**")
+                                        evidence_fields = set([e["field"] for e in decision.evidence_pointers if e.get("page") == page_number])
+
+                                        field_colors = {
+                                            "claimant_name": "🔴 Claimant Name",
+                                            "policy_id": "🔵 Policy ID",
+                                            "incident_date": "🟢 Incident Date",
+                                            "claim_amount_total_usd": "🟡 Claim Amount",
+                                            "injury_severity": "🟠 Injury Severity",
+                                            "incident_type": "⚫ Incident Type",
+                                        }
+
+                                        for field in evidence_fields:
+                                            if field in field_colors:
+                                                st.caption(field_colors[field])
+                                else:
+                                    st.error("Failed to render PDF page")
+                        else:
+                            st.info("📄 PDF preview: Install pdf2image for page rendering\n\n`pip install pdf2image`")
 
                     else:
                         st.warning("PDF file not found")

@@ -40,11 +40,25 @@ def read_jsonl(file_path: str | Path) -> list[dict[str, Any]]:
     return lines
 
 
-def load_yaml_rules(rules_path: str | Path = "rules.yaml") -> dict[str, Any]:
+def load_yaml_rules(rules_path: str | Path = "rules.yaml") -> dict[str, Any] | None:
     """Load rules from YAML file."""
     import yaml
-    with open(rules_path, "r") as f:
-        return yaml.safe_load(f)
+    try:
+        with open(rules_path, "r") as f:
+            data = yaml.safe_load(f)
+            # Ensure we return a dictionary, not a string
+            if isinstance(data, dict):
+                return data
+            elif isinstance(data, str):
+                # If it's a string, try to parse it as YAML content
+                try:
+                    return yaml.safe_load(data)
+                except:
+                    return None
+            else:
+                return None
+    except Exception:
+        return None
 
 
 def save_yaml_rules(rules_content: str, rules_path: str | Path = "rules.yaml") -> None:

@@ -23,6 +23,15 @@ class RuleEngine:
             return
 
         rules_data = load_yaml_rules(self.rules_path)
+        if rules_data is None:
+            self.rules = []
+            return
+        
+        # Handle case where YAML contains just a string or is not a dict
+        if not isinstance(rules_data, dict):
+            self.rules = []
+            return
+            
         self.rules = rules_data.get("rules", [])
 
     def evaluate(self, claim: StructuredClaim, raw_file_path: str = "") -> RoutingDecision:
