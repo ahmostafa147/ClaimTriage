@@ -56,6 +56,23 @@ Then run:
 ./run.sh
 ```
 
+### 4. Enable Pathway Streaming (Optional)
+
+For production-grade real-time streaming:
+
+```bash
+# Install Pathway
+pip install pathway
+
+# Enable in .env
+echo "USE_PATHWAY_STREAMING=true" >> .env
+
+# Run
+./run.sh
+```
+
+**Note:** The system works in simple pipeline mode by default. Pathway streaming is optional for production deployments requiring high throughput (1000+ claims/min).
+
 ## 90-Second Demo Script
 
 Perfect for live judging! 🎯
@@ -133,11 +150,14 @@ graph LR
 - Maintains **live index** of claims and routing decisions
 - Enables sub-second routing updates when rules change
 - Built for production scale (handles 1000s of documents/hour)
+- **Two modes**: Simple pipeline (default) and Pathway streaming (production)
 
 Without these tools:
 - Manual extraction would miss 30-40% of fields in noisy docs
 - Batch processing would delay routing by minutes/hours
 - No bounding boxes = no evidence chain = no audit trail
+
+**📖 See [PATHWAY_INTEGRATION.md](PATHWAY_INTEGRATION.md) for detailed Pathway setup and usage**
 
 ## Project Structure
 

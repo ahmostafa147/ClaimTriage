@@ -1,0 +1,32 @@
+========================================
+COPY AND PASTE THESE COMMANDS
+========================================
+
+cd "/Users/ahmostafa/Desktop/Microsoft Hackathon/ClaimTriage"
+
+# Quick test (recommended)
+/opt/anaconda3/bin/python quick_pathway_test.py
+
+# OR full test suite
+/opt/anaconda3/bin/python test_prod_pathway.py
+
+# OR run existing pytest tests
+/opt/anaconda3/bin/python -m pytest tests/test_pathway.py -v
+
+========================================
+
+The tests will:
+1. Check LANDINGAI_API_KEY from your environment
+2. Verify Pathway is installed (or note if not)
+3. Test LandingAI ADE extraction with real documents
+4. Show extracted fields and routing decisions
+5. Display performance metrics
+
+Expected output:
+- API key found ✅
+- Pathway status (installed or not)
+- Document extraction with ADE
+- Routing decisions
+- Performance metrics
+
+========================================

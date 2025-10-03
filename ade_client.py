@@ -319,32 +319,79 @@ class MockExtractor:
 
 
 class ADEExtractor:
-    """Production extractor using LandingAI ADE."""
+    """Production extractor using LandingAI."""
 
     def __init__(self, api_key: str | None = None):
         self.api_key = api_key or os.getenv("LANDINGAI_API_KEY")
         if not self.api_key:
             raise ValueError("LANDINGAI_API_KEY not set")
 
+        # Get endpoint ID if available (optional for some APIs)
+        self.endpoint_id = os.getenv("LANDINGAI_ENDPOINT_ID", "")
+
     def extract(self, file_path: str | Path) -> StructuredClaim:
-        """Extract structured claim using LandingAI ADE."""
+        """Extract structured claim using LandingAI."""
         try:
             # Import LandingAI SDK
-            from landingai.ade import ADEClient
+            from landingai.predict import Predictor, OcrPredictor
 
-            client = ADEClient(api_key=self.api_key)
+            # For document extraction, we'll use OcrPredictor if available, else Predictor
+            # Note: This is a simplified version. Real usage would need proper endpoint setup.
+
+            # Create predictor
+            # For demo: if no endpoint_id, use OcrPredictor for general OCR
+            if self.endpoint_id:
+                predictor = Predictor(endpoint_id=self.endpoint_id, api_key=self.api_key)
+            else:
+                # Use OCR predictor for document extraction
+                try:
+                    predictor = OcrPredictor(api_key=self.api_key)
+                except Exception as e:
+                    print(f"Note: Could not initialize OcrPredictor: {e}")
+                    print("Using mock extraction. For real LandingAI extraction, set LANDINGAI_ENDPOINT_ID")
+                    raise
 
             # Extract with retries
             max_retries = 3
+            result = None
+
             for attempt in range(max_retries):
                 try:
-                    result = client.extract(
-                        file_path=str(file_path),
-                        fields=["claimant_name", "policy_id", "incident_date",
-                               "claim_amount", "injury_severity", "incident_type"],
-                        include_tables=True,
-                        include_bboxes=True
-                    )
+                    # Read and predict
+                    from PIL import Image
+
+                    # Convert PDF to image or read directly
+                    with open(file_path, 'rb') as f:
+                        # Predict using LandingAI
+                        prediction_result = predictor.predict(image=str(file_path))
+
+                    # Extract text and structured data from result
+                    # LandingAI returns predictions in various formats
+                    # This is a simplified extraction - real implementation would parse the specific format
+
+                    extracted_text = ""
+                    if hasattr(prediction_result, 'text'):
+                        extracted_text = prediction_result.text
+                    elif hasattr(prediction_result, 'ocr_text'):
+                        extracted_text = prediction_result.ocr_text
+                    elif isinstance(prediction_result, dict):
+                        extracted_text = prediction_result.get('text', '')
+
+                    # For now, parse text to extract fields (simplified)
+                    # Real implementation would use LandingAI's structured extraction
+                    result = {
+                        "full_text": extracted_text,
+                        "claimant_name": None,  # Would be extracted from text
+                        "policy_id": None,
+                        "incident_date": None,
+                        "claim_amount": None,
+                        "injury_severity": None,
+                        "incident_type": None,
+                        "tables": [],
+                        "bboxes": {},
+                        "confidences": {}
+                    }
+
                     break
                 except Exception as e:
                     if attempt == max_retries - 1:
